@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern HTML Email Template</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        background-color: #cccccc;
+      }
+      table {
+        border-spacing: 0; /*no spacing off the table*/
+      }
+      td {
+        padding: 0;
+      }
+      img {
+        border: 0;
+      }
+      /*wrapper of center tags that enclose a table*/
+      .wrapper {
+        width: 100%;
+        table-layout: fixed; /*keep first outermost table within center region or tags*/
+        background-color: #cccccc;
+        padding-bottom: 60px;
+      }
+      /* main belong to the first outermost table */
+      .main {
+        background-color: #ffffff;
+        margin: 0 auto; /*reinforce centering*/
+        width: 100%; /*reinforce 100%*/
+        max-width: 600px; /*email width good for most devices width*/
+        border-spacing: 0; /* reinforce no spacing off the table*/
+        font-family: sans-serif;
+        color: #171a1b; /*color of font in table*/
+      }
+      .two-columns {
+        /*logo & social icons 2 columns*/
+        text-align: center;
+        font-size: 0; /*erase the dirty spot at the bottom of images social icons*/
+      }
+      .two-columns .column {
+        /*make logo & social icons 2 columns  flex per devices width*/
+        width: 100%; /*for each column*/
+        max-width: 300px; /*for each column because 2 columns x 300px = 600px full width*/
+        display: inline-block; /*render inline of blocks of 3 columns, left to right when screen is wide*/
+        vertical-align: top; /*make inine-block to stack from top to bottom when screen is downsized */
+        text-align: center; /*double work of two-columns text-align: center*/
+      }
+      .three-columns {
+        /*3 columns*/
+        text-align: center;
+        font-size: 0; /*erase the dirty spots at the bottom of social icons*/
+        padding: 15px 0 25px;
+      }
+      .three-columns .column {
+        /*make 3 columns  flex per devices width*/
+        width: 100%; /*for each column*/
+        max-width: 200px; /*for each column because 3 columns x 200px = 600px full width*/
+        display: inline-block; /*render inline of blocks of 3 columns, left to right when screen is wide*/
+        vertical-align: top; /*make inine-block to stack from top to bottom when screen is downsized */
+        text-align: center; /*double work of two-columns text-align: center*/
+      }
+      .three-columns .padding {
+        padding: 15px;
+      }
+      .three-columns .content {
+        font-size: 15px; /*to bring back the large paragraphs under Ecommerce, WebDesign, HTMLEmail*/
+        line-height: 20px;
+        padding: 0 5px;
+      }
+      .two-columns.last {
+        /* .two-columns.last not same as .tow-columns .last */
+        /* .two-columns.last is a single class in html body .two-colums last  but  
+         .tow-columns .last are parent and child classes separately */
+        padding: 15px 0;
+      } /*0 remove horizontal padding allow image, and text on 2 columns side by side*/
+      .two-columns .padding {
+        padding: 20px;
+      } /*add padding to individual columns*/
+      .two-columns .content {
+        font-size: 15px;
+        line-height: 20px;
+        text-align: left;
+      } /*font-size bring out paragraph text*/
+      .button {
+        background-color: #ffffff;
+        color: #171a1b;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+      } /*color is text color
+        text-decoration none to remove underline
+        border-radius round the button corners*/
+      .button-dark {
+        background-color: #171a1b;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+      } /*color is text color
+        text-decoration none to remove underline
+        border-radius round the button corners*/
+
+      /*switch upper tr of three-columns-section Ecommerce & WebDesign & HTMLEmail  and 
+      lower tr of two-columns-section Create Custom Designs*/
+      @media (max-width: 600px) {
+        tbody {
+          display: block;
+        }
+        .top { /*upper tr of three-columns-section Ecommerce & WebDesign & HTMLEmail*/
+          display: table-footer-group;
+        }
+        .bottom { /*lower tr of two-columns-section Create Custom Designs*/
+          display: table-header-group;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <center class="wrapper">
+      <!--contains entire email. center is used in email but not HTML5-->
+      <table class="main" width="100%">
+        <!--contains entire email--><!--tables stock top to bottom-->
+
+        <!-- TOP BORDER -->
+        <tr>
+          <!--tr  stock top to bottom-->
+          <td height="8" style="background-color: #171a1b"></td>
+          <!-- TOP BORDER -->
+          <!--td  data go left to right-->
+        </tr>
+
+        <!-- Two Columns LOGO & Social Icons SECTION -->
+        <tr>
+          <td style="padding: 14px 0 4px">
+            <!--14 top, 0 lett&right, 4(<14) bottom because inherent bottom padding-->
+            <table width="100%">
+              <!--conatins left logo and right social icons-->
+              <tr>
+                <td class="two-columns">
+                  <table class="column">
+                    <!--conatins left logo and right social icons-->
+                    <!--contains left logo-->
+                    <tr>
+                      <td style="padding: 0 62px 10px">
+                        <!--contains left logo-->
+                        <!--62px to fine tone center left logo-->
+                        <a
+                          href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                        >
+                          <img
+                            src="img/modern.jpg"
+                            alt="Modern Logo"
+                            width="180"
+                            title="Modern Logo"
+                          />
+                          <!--alt shows text in case img does not display. title displays text when cursor hover on img-->
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="column">
+                    <!--contains right social icons-->
+                    <tr>
+                      <td style="padding: 10px 72px">
+                        <!--contains right-side 5 social icons, td go from left to right-->
+                        <!--10px top, 72px left&right-->
+                        <a
+                          href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                        >
+                          <img src="img/black-facebook.png" alt="" width="30" />
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                        >
+                          <img src="img/black-twitter.png" alt="" width="30" />
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                        >
+                          <img src="img/black-youtube.png" alt="" width="30" />
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                        >
+                          <img src="img/black-linkedin.png" alt="" width="30" />
+                        </a>
+                        <a
+                          href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                        >
+                          <img
+                            src="img/black-instagram.png"
+                            alt=""
+                            width="30"
+                          />
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- BANNER IMAGE -->
+        <tr>
+          <td>
+            <a href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+              ><img
+                src="img/banner.jpg"
+                alt=""
+                width="600"
+                style="max-width: 100%"
+              />
+              <!--width 600 downsize banner(>600px)to email-->
+              <!--max-width100% scale down banner intead of losing side of banner if device window is narrow-->
+            </a>
+          </td>
+        </tr>
+
+        <!-- THREE COLUMN SECTION Ecommerce & WebDesign & HTMLEmail-->
+        <tbody>
+          <tr>
+            <!--contains 3 columns-->
+            <td>
+              <table width="100%">
+                <!--contains 3 columns-->
+                <tr class="top">
+                  <td class="three-columns">
+                    <!--contains 3 columns-->
+                    <!--column 1/3 top-->
+                    <table class="column">
+                      <tr>
+                        <td class="padding">
+                          <!--or style="padding:   " inside this td-->
+                          <table class="content">
+                            <tr>
+                              <!--icon top-->
+                              <td>
+                                <a
+                                  href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                                  ><img
+                                    src="img/email.png"
+                                    alt=""
+                                    width="130"
+                                    style="max-width: 130px"
+                                  />
+                                  <!--width 130 x 3 approx 600px-->
+                                  <!--max-width ensure scalable, not to lose side of banner if device window is narrow-->
+                                </a>
+                              </td>
+                            </tr>
+                            <!--icon bottom-->
+                            <tr>
+                              <!--2 paragraphs-->
+                              <td>
+                                <!-- p stack , inherent is 16px-->
+                                <p style="font-weight: bold; font-size: 17px">
+                                  Ecommerce
+                                </p>
+                                <p>
+                                  Responsive HTML Email Template Course to
+                                  master email development
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <!--column 1/3 bottom-->
+
+                    <!--column 2/3 top-->
+                    <table class="column">
+                      <tr>
+                        <td class="padding">
+                          <!--or style="padding:   " inside this td-->
+                          <table class="content">
+                            <tr>
+                              <!--icon top-->
+                              <td>
+                                <a
+                                  href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                                  ><img
+                                    src="img/settings.png"
+                                    alt=""
+                                    width="130"
+                                    style="max-width: 130px"
+                                  />
+                                  <!--width 130 x 3 approx 600px-->
+                                  <!--max-width ensure scalable, not to lose side of banner if device window is narrow-->
+                                </a>
+                              </td>
+                            </tr>
+                            <!--icon bottom-->
+                            <tr>
+                              <!--2 paragraphs-->
+                              <td>
+                                <!-- p stack , inherent is 16px-->
+                                <p style="font-weight: bold; font-size: 17px">
+                                  Web Design
+                                </p>
+                                <p>
+                                  Responsive HTML Email Template Course to
+                                  master email development
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <!--column 2/3 bottom-->
+
+                    <!--column 3/3 top-->
+                    <table class="column">
+                      <tr>
+                        <td class="padding">
+                          <!--or style="padding:   " inside this td-->
+                          <table class="content">
+                            <tr>
+                              <!--icon top-->
+                              <td>
+                                <a
+                                  href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                                  ><img
+                                    src="img/home.png"
+                                    alt=""
+                                    width="130"
+                                    style="max-width: 130px"
+                                  />
+                                  <!--width 130 x 3 approx 600px-->
+                                  <!--max-width ensure scalable, not to lose side of banner if device window is narrow-->
+                                </a>
+                              </td>
+                            </tr>
+                            <!--icon bottom-->
+                            <tr>
+                              <!--2 paragraphs-->
+                              <td>
+                                <!-- p stack , inherent is 16px-->
+                                <p style="font-weight: bold; font-size: 17px">
+                                  HTML Email
+                                </p>
+                                <p>
+                                  Responsive HTML Email Template Course to
+                                  master email development
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <!--column 3/3 bottom-->
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- TWO COLUMN SECTION  Create Custom Designs -->
+          <tr class="bottom">
+            <td style="background-color: #26292b; color: #ffffff">
+              <!--color is text color-->
+              <table width="100%">
+                <tr>
+                  <td class="two-columns last">
+                    <!--contain image, text and button. 
+                    Generated by typing td.two-columns.last
+                    In CSS, .two-columns.last & no space-->
+
+                    <table class="column">
+                      <!--contain image on the left-->
+                      <tr>
+                        <td class="padding">
+                          <table class="content">
+                            <tr>
+                              <td>
+                                <a
+                                  href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                                >
+                                  <img
+                                    src="img/keyboard.jpg"
+                                    alt=""
+                                    width="260"
+                                    style="max-width: 260px"
+                                  /><!--width 260px-->
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table class="column">
+                      <!--contain image on the left-->
+                      <tr>
+                        <td class="padding">
+                          <table class="content">
+                            <tr>
+                              <td>
+                                <p style="font-weight: bold; font-size: 18px">
+                                  Create Custom Designs
+                                </p>
+                                <p style="padding-bottom: 16px">
+                                  Over the years we have built up a massive
+                                  portfolio our client website and email designs
+                                </p>
+                                <!--padding bottom render a space between paragraph and button-->
+                                <a
+                                  href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                                  class="button"
+                                  >Read More</a
+                                >
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- TITLE HTML, TEXT paragraph & BUTTON dark -->
+          <tr>
+            <td style="padding: 15px 0 50px">
+              <!--padding 15px top, 0px left&right, 50px bottom-->
+              <table width="100%">
+                <tr>
+                  <td style="text-align: center; padding: 15px">
+                    <!-- padding 15px all around-->
+                    <p style="font-size: 20px; font-weight: bold">
+                      HTML Email Template Course
+                    </p>
+                    <p
+                      style="
+                        line-height: 23px;
+                        font-size: 15px;
+                        padding: 5px 0 15px;
+                      "
+                    >
+                      Responsive HTML Email Templates that you can build around.
+                      Responsive HTML Email Templates that you can build around.
+                      Responsive HTML Email Templates that you can build around.
+                      Responsive HTML Email Templates that you can build around.
+                    </p>
+                    <a
+                      href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                      class="button-dark"
+                      >View Course</a
+                    >
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+
+        <!-- FOOTER SECTION -->
+        <tr>
+          <td style="background-color: #26292b">
+            <table width="100%">
+              <tr>
+                <td
+                  style="text-align: center; padding: 45px 30px; color: #ffffff"
+                >
+                  <!--padding 45px top&bottom, 30px left&right (used to be 20px if we did not switch tr's of
+                    upper tr of three-columns-section Ecommerce & WebDesign & HTMLEmail  and 
+                    lower tr of two-columns-section Create Custom Designs)-->
+                  <a
+                    href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                    ><img
+                      src="img/modern-white.png"
+                      alt=""
+                      width="180"
+                    /><!--resize logo Modern to 180px-->
+                  </a>
+                  <p style="padding: 10px">Modern HTML email</p>
+                  <p style="padding: 10px">
+                    123 Wall street, New York, NY 12345
+                  </p>
+                  <a
+                    href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                  >
+                    <img src="img/white-facebook.png" alt="" width="30" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                  >
+                    <img src="img/white-twitter.png" alt="" width="30" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                  >
+                    <img src="img/white-youtube.png" alt="" width="30" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                  >
+                    <img src="img/white-linkedin.png" alt="" width="30" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                  >
+                    <img src="img/white-instagram.png" alt="" width="30" />
+                  </a>
+                  <p style="padding: 10px">
+                    <a
+                      href="https://www.linkedin.com/in/kate-de-la-wion-3256aa1a2/"
+                      class="button-dark"
+                      >Subscribe</a
+                    >
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
